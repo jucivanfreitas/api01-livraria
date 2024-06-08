@@ -13,10 +13,6 @@ const port = process.env.PORT || 3000;
 
 app.use('/livros', rotaLivro)
 
-// Start the server
-//app.get('/connect', (req, res) => {
-///  res.send('api conectaddddd....');
-//}); // http://localhost:3000/livros/connect/
 
 
 app.listen(port, () => {
