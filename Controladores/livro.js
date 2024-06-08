@@ -66,6 +66,7 @@ function postLivro(req, res) {
     try {
         const livroNovo = req.body
         insereLivro(livroNovo)
+        console.log(req.body)
         res.send('Livro inserido com sucesso!'+ livroNovo + req.body)
         res.status(201)
 

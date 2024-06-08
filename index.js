@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-//app.use(express.json())
+app.use(express.json())
 //const port = process.env.PORT || 3000;
 const rotaLivro = require("./Rotas/livro")
 
