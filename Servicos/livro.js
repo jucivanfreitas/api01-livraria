@@ -24,7 +24,7 @@ function insereLivro(livroNovo) {
 
 function modificaLivro (modificacoes,id){
     let livrosAtuais = JSON.parse (fs.readFileSync("./livros.json"))
-    const indiceMode = livrosAtuais.findIndex(livro => livro.id === id)
+    const indiceMode = livrosAtuais.findIndex(livro => livro.id == parseInt(id))
     const conteudoMudado ={...livrosAtuais[indiceMode], ...modificacoes}
     livrosAtuais[indiceMode]=conteudoMudado
 
@@ -32,7 +32,7 @@ function modificaLivro (modificacoes,id){
 }
 function deletaLivro(id){
     let livrosAtuais = JSON.parse (fs.readFileSync("./livros.json"))
-    const excetoID = livrosAtuais.filter(livro => livro.id !== id)
+    const excetoID = livrosAtuais.filter(livro => livro.id !== parseInt(id))
 
     fs.writeFileSync("./livros.json", JSON.stringify(excetoID))
 
