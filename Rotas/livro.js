@@ -8,11 +8,11 @@ const router = Router();
 //Rotas
 
 // Sample route
-router.get('/connect', (req, res) => {
+router.get('/', (req, res) => {
   res.send('api conectada.....');
 }); // http://localhost:3000/livros/connect/
 
-router.get('/', getLivros)
+//router.get('/', getLivros)
 router.get('/id', getLivro) //http://localhost:3000/livros/id?id=1
 router.get('/nm', getLivroNM) //http://localhost:3000/livros/nm?nome=demai
 
