@@ -9,7 +9,7 @@ const router = Router();
 
 // Sample route
 router.get('/', (req, res) => {
-  res.send('api conectada.....');
+  res.send('api livros conectada com sucesso.....');
 }); // http://localhost:3000/livros/
 // https://api01-livraria.onrender.com/livros/
 
