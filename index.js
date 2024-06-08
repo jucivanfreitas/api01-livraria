@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 
 
-app.use('/', rotaLivro)
+app.use('/livros', rotaLivro)
 
 // Start the server
 //app.get('/connect', (req, res) => {
