@@ -5,15 +5,14 @@ app.use(express.json())
 //const port = process.env.PORT || 3000;
 app.use(cors({origin:"*"}))
 const rotaLivro = require("./Rotas/livro")
+const rotaFavorito =require("./Rotas/favoritos")
 
 
 
 const port = process.env.PORT || 3001;
 
-
-
-
 app.use('/livros', rotaLivro)
+app.use('/favoritos', rotaFavorito)
 
 
 
