@@ -8,9 +8,9 @@ router.get('/', (req, res) => {
 
 router.get('/all', getFavoritos);
 
-router.post('/:id', postFavoritos);
+router.post('/:id', postfavoritos);
 
-router.delete('/:id', deleteFavorito);
+router.delete('/:id', apgaFavorito);
 
 // Rotas
 module.exports = router
