@@ -17,7 +17,8 @@ function getFavoritos(req,res){
 function postfavoritos(req, res) {
 
   try {
-      const id=req.query.id
+
+      const id=req.params.id
       insereFavorito(id)
       res.send('Livro favoritado  com sucesso!')
       res.status(201)
@@ -30,7 +31,7 @@ function postfavoritos(req, res) {
 
 function apgaFavorito(req,res){
   try {
-    const id =req.query.id
+    const id =req.params.id
     deletaFavoritoPorId(id)
     if (!Number(id))  {
       res.status(422).json({code: 422, error: 'ID digitado é inválido. dígite um número inteiro. ' + id + '. Tente outro id.', resolution: '400 Bad req'})
