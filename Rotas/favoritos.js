@@ -3,13 +3,14 @@ const { getFavoritos, postfavoritos, apgaFavorito } = require("../Controladores/
 
 const router =Router()
 router.get('/', (req, res) => {
-  res.send('api favoritos conectada com sucesso.....');
-}); // http://localhost:3001/favoritos/
-router.get('/all',getFavoritos ) //http://localhost:3000/livros/livros
+  res.send('API favoritos conectada com sucesso.....');
+});
 
-router.post('/send', postfavoritos)
-router.delete('/id', apgaFavorito)
+router.get('/all', getFavoritos);
 
+router.post('/:id', postFavoritos);
+
+router.delete('/:id', deleteFavorito);
 
 // Rotas
 module.exports = router
